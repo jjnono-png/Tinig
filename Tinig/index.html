@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tinig – Usapang bayan, sama-sama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+<meta name="description" content="Tinig: isang plataporma para sa mapayapa at may batayang usapang bayan.">
+<meta property="og:title" content="Tinig – Usapang bayan, sama-sama">
+<meta property="og:description" content="Mapayapa, may batayan, para sa lahat.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14205c" id="theme-color-meta">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skipContent">Lumaktaw sa nilalaman</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7.5L21 11M5.5 9.5V20h13V9.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1112 0v5l1.5 2h-15zM10 21h4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.8-8-10.5A4.5 4.5 0 0112 7a4.5 4.5 0 018 2.5C20 15.200 12 20 12 20z"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.700 7L4 20l1.200-4.600A8 8 0 1121 12z"/></symbol>
+  <symbol id="i-repost" viewBox="0 0 24 24"><path d="M17 3l3 3-3 3M4 11V9a3 3 0 013-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 01-3 3H4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.500"/><path d="M21 16l-5-5-9 9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11.500a7 7 0 10-14 0C5 15 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 15.5A8.5 8.5 0 018.5 3.5 8.5 8.5 0 1020.5 15.5z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></symbol>
+</svg>
+
+<div class="shell">
+
+  <!-- ============ KALIWA ============ -->
+  <header class="rail">
+    <a class="logo" href="#/" aria-label="Tinig – Home" data-i18n-aria="appHome"><svg viewBox="0 0 24 24"><use href="#i-reply"/></svg></a>
+    <nav aria-label="Pangunahing menu" data-i18n-aria="mainMenu">
+      <a class="on" href="#/" data-r="home" aria-label="Home" data-i18n-aria="homeNav" aria-current="page"><svg><use href="#i-home"/></svg></a>
+      <a href="#/search" data-r="search" aria-label="Maghanap" data-i18n-aria="searchTitle"><svg><use href="#i-search"/></svg></a>
+      <a class="post" href="#" aria-label="Mag-post" data-i18n-aria="postButton"><svg><use href="#i-plus"/></svg></a>
+      <a href="#/notifications" data-r="notifications" aria-label="Mga abiso" data-i18n-aria="notificationsTitle"><svg><use href="#i-bell"/></svg></a>
+      <a href="#/profile" data-r="profile" aria-label="Profile" data-i18n-aria="profileTitle"><svg><use href="#i-user"/></svg></a>
+    </nav>
+    <a class="av c6 me me-av" href="#/profile" aria-label="Profile ko" data-i18n-aria="myProfile">KA</a>
+  </header>
+
+  <!-- ============ GITNA ============ -->
+  <main id="main" tabindex="-1">
+    <div class="utility-bar" aria-label="Display settings" data-i18n-aria="displaySettings">
+      <div class="utility-copy">
+        <span class="eyebrow">TINIG</span>
+        <span data-i18n="utilityIntro">I-personalize ang iyong karanasan</span>
+      </div>
+      <div class="utility-actions">
+        <button class="utility-btn" id="languageToggle" type="button" aria-label="Switch language">English</button>
+        <button class="utility-btn" id="themeToggle" type="button" aria-label="Switch to dark mode"><svg><use href="#i-moon"/></svg><span data-i18n="darkMode">Dark mode</span></button>
+      </div>
+    </div>
+  <section class="view" data-view="home">
+    <section class="sun-banner">
+      <h1 data-i18n="heroTitle">Ang tinig mo, may saysay.</h1>
+      <p data-i18n="heroDescription">Dito nagtatagpo ang mga Pilipinong nagbabantay, nagtatanong, at kumikilos para sa mas malinis at mas makatarungang pamahalaan.</p>
+      <div class="pledge"><span data-i18n="pledgePeaceful">Mapayapa</span><span data-i18n="pledgeEvidence">May batayan</span><span data-i18n="pledgeAll">Para sa lahat</span></div>
+    </section>
+
+    <section class="info-feed" aria-labelledby="infoFeedTitle">
+      <div class="info-heading">
+        <div>
+          <span class="eyebrow" data-i18n="infoEyebrow">MAPAGKAKATIWALAANG SANGGUNIAN</span>
+          <h2 id="infoFeedTitle" data-i18n="infoFeedTitle">Balita at Impormasyon</h2>
+          <p data-i18n="infoFeedIntro">Mga balita, ulat, at anunsyong mababasa mula sa mga opisyal na sanggunian.</p>
+        </div>
+        <span class="source-note" data-i18n="officialSources">Opisyal na sanggunian</span>
+      </div>
+      <div class="info-grid">
+        <a class="info-card" href="https://ncr.dilg.gov.ph/posts/" target="_blank" rel="noopener noreferrer">
+          <span class="info-source">DILG – National Capital Region</span>
+          <span class="info-date" data-i18n="dilgDate">Nobyembre 20, 2026</span>
+          <h3 data-i18n="dilgHeadline">Pinapalawak ng DILG-NCR ang pag-aaral sa fiscal autonomy sa pamamagitan ng konsultasyon sa mga LGU</h3>
+          <p data-i18n="dilgSummary">Bisitahin ang opisyal na pahina para sa pinakabagong balita at anunsyo tungkol sa mga lokal na pamahalaan.</p>
+          <span class="info-link" data-i18n="readOfficial">Basahin sa opisyal na site ↗</span>
+        </a>
+        <a class="info-card" href="https://www.coa.gov.ph/reports/annual-audit-reports/" target="_blank" rel="noopener noreferrer">
+          <span class="info-source">Commission on Audit (COA)</span>
+          <span class="info-date" data-i18n="resourceLabel">Mga pampublikong ulat</span>
+          <h3 data-i18n="coaHeadline">Mga Annual Audit Report</h3>
+          <p data-i18n="coaSummary">Tingnan ang mga nailathalang audit report para sa mga ahensiya ng pamahalaan at lokal na pamahalaan.</p>
+          <span class="info-link" data-i18n="readOfficial">Basahin sa opisyal na site ↗</span>
+        </a>
+        <a class="info-card" href="https://officialgazette.gov.ph/section/executive-issuances/" target="_blank" rel="noopener noreferrer">
+          <span class="info-source">Official Gazette of the Philippines</span>
+          <span class="info-date" data-i18n="governmentIssuances">Mga kautusan at dokumento</span>
+          <h3 data-i18n="gazetteHeadline">Mga opisyal na kautusan at pabatid</h3>
+          <p data-i18n="gazetteSummary">Basahin ang mga executive order at iba pang opisyal na pahayag ng pamahalaan.</p>
+          <span class="info-link" data-i18n="readOfficial">Basahin sa opisyal na site ↗</span>
+        </a>
+      </div>
+      <p class="info-disclaimer" data-i18n="infoDisclaimer">Paalala: dadalhin ka ng mga link sa panlabas na website. Suriin ang petsa at buong konteksto ng bawat ulat.</p>
+    </section>
+
+    <div class="compose">
+      <div class="av c6 me-av" aria-hidden="true">KA</div>
+      <div class="field">
+        <strong id="who">kapwa_ko</strong>
+        <label class="sr" for="composer" data-i18n="composerLabel">Isulat ang post mo</label>
+        <textarea id="composer" rows="2" maxlength="280" placeholder="Ano’ng nakita o napag-aralan mo ngayon?" data-i18n-placeholder="composerPlaceholder"></textarea>
+        <label class="anon"><input type="checkbox" id="anon"><span data-i18n="anonymousLabel">Mag-post nang anonymous (hindi lalabas ang pangalan mo)</span></label>
+        <div class="row">
+          <div class="tools">
+            <button type="button" aria-label="Maglagay ng larawan" data-i18n-aria="addImage"><svg><use href="#i-img"/></svg></button>
+            <button type="button" aria-label="Maglagay ng lokasyon" data-i18n-aria="addLocation"><svg><use href="#i-pin"/></svg></button>
+            <button type="button" aria-label="Maglagay ng sanggunian" data-i18n-aria="addSource"><svg><use href="#i-check"/></svg></button>
+          </div>
+          <span class="count" id="count" aria-live="polite">0/280</span>
+          <button class="btn" id="postBtn" disabled data-i18n="postButton">Mag-post</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <input type="radio" name="tab" id="t1" checked>
+      <input type="radio" name="tab" id="t2">
+      <input type="radio" name="tab" id="t3">
+      <div class="tablist" role="tablist">
+        <label for="t1" data-i18n="tabForYou">Para sa’yo</label>
+        <label for="t2" data-i18n="tabFollowing">Sinusubaybayan</label>
+        <label for="t3" data-i18n="tabVerified">Beripikado</label>
+      </div>
+
+      <!-- Para sa'yo -->
+      <div class="pane p1" id="feed">
+
+        <!-- Thread 1: pagsusuri ng badyet -->
+        <article class="thread">
+          <div class="side"><div class="av c2">MS</div><div class="line"></div></div>
+          <div class="body">
+            <div class="head"><b>Marisol Santos</b><span class="at">@mariz.nagbabasa</span><span class="badge"><svg><use href="#i-check"/></svg><span data-i18n="roleResearcher">Mananaliksik</span></span><time data-i18n="timeTwoHours">2 oras</time></div>
+            <p data-i18n-html="budgetPost">Binasa ko ang buong panukalang badyet ng distrito namin. 🧵 Hindi ito tsismis, nasa pampublikong dokumento mismo. Ito ang mga nakita ko:</p>
+            <div class="fact">
+              <h4 data-i18n="floodProject">Proyektong pang-baha, distrito 3</h4>
+              <ul>
+                <li><span data-i18n="allocatedBudget">Inilaang pondo</span><span>₱ 480M</span></li>
+                <li><span data-i18n="reportedCompleted">Natapos ayon sa ulat</span><span data-i18n="projectsCount">12 sa 20 proyekto</span></li>
+                <li><span data-i18n="withEvidence">May larawan o kumpirmasyon</span><span data-i18n="onlyFive">5 lamang</span></li>
+              </ul>
+              <small data-i18n="budgetSource">Sanggunian: pampublikong ulat sa badyet. Nakalakip ang link sa ikalawang post.</small>
+            </div>
+            <div class="acts">
+              <button><svg><use href="#i-heart"/></svg>1.2K</button>
+              <button><svg><use href="#i-reply"/></svg>148</button>
+              <button><svg><use href="#i-repost"/></svg>396</button>
+              <button><svg><use href="#i-send"/></svg></button>
+            </div>
+          </div>
+        </article>
+        <article class="thread sub">
+          <div class="side"><div class="av c2">MS</div></div>
+          <div class="body">
+            <div class="head"><b>Marisol Santos</b><time data-i18n="timeTwoHours">2 oras</time></div>
+            <p data-i18n-html="budgetFollowup">Paano ka makakatulong: pumunta sa barangay hall, hilingin ang kopya ng ulat ng proyekto, at <span class="tag">#TanongBayan</span> ang ibahagi mo rito. Isa-isa nating i-verify.</p>
+            <div class="acts">
+              <button><svg><use href="#i-heart"/></svg>864</button>
+              <button><svg><use href="#i-reply"/></svg>52</button>
+              <button><svg><use href="#i-repost"/></svg>211</button>
+            </div>
+          </div>
+        </article>
+        <article class="thread sub last">
+          <div class="side"><div class="av sm c3">R</div></div>
+          <div class="body"><div class="reply-meta" data-i18n-html="replyCount"><b>Ruel</b> at 146 pang iba ay sumagot</div></div>
+        </article>
+
+        <!-- Thread 2: placard -->
+        <article class="thread last">
+          <div class="side"><div class="av c1">LD</div></div>
+          <div class="body">
+            <div class="head"><b>Lakbay Dignidad</b><span class="at">@lakbaydignidad</span><span class="badge org"><svg><use href="#i-check"/></svg><span data-i18n="roleOrganization">Samahan</span></span><time data-i18n="timeFiveHours">5 oras</time></div>
+            <p data-i18n="peacefulGathering">Mapayapang pagtitipon ngayong Sabado, 4:00 NH, Liwasang Bonifacio. Magdala ng tubig, payong, at placard na may sariling mensahe. Walang bitbit na panganib, walang away.</p>
+            <div class="placard">
+              <strong data-i18n="placardTitle">Transparency ay hindi pabor. Karapatan.</strong>
+              <span data-i18n="placardSubtitle">Dalhin ang boses mo, iwan ang galit sa bahay.</span>
+            </div>
+            <div class="acts">
+              <button><svg><use href="#i-heart"/></svg>2.8K</button>
+              <button><svg><use href="#i-reply"/></svg>301</button>
+              <button><svg><use href="#i-repost"/></svg>1.4K</button>
+              <button><svg><use href="#i-send"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Thread 3: payo -->
+        <article class="thread last">
+          <div class="side"><div class="av c3">AT</div></div>
+          <div class="body">
+            <div class="head"><b>Atty. Tala</b><span class="at">@abogado.sakalsada</span><span class="badge"><svg><use href="#i-check"/></svg><span data-i18n="roleLawyer">Abogado</span></span><time data-i18n="timeOneDay">1 araw</time></div>
+            <p data-i18n="rightsPostOne">Para sa mga unang beses sasama sa rally: ang mapayapang pagtitipon ay karapatang kinikilala ng Konstitusyon. I-save ang numero ng pinagkakatiwalaang abogado, sabihin sa kaibigan kung nasaan ka, at huwag iwan ang grupo.</p>
+            <p data-i18n-html="rightsPostTwo">Kung may maling pagtrato, kumuha ng pangalan, oras, at lugar. Ang tamang tala ay tulong sa susunod na kasong ihahain. <span class="tag">#AlamAngKarapatan</span></p>
+            <div class="acts">
+              <button><svg><use href="#i-heart"/></svg>5.6K</button>
+              <button><svg><use href="#i-reply"/></svg>420</button>
+              <button><svg><use href="#i-repost"/></svg>3.1K</button>
+              <button><svg><use href="#i-send"/></svg></button>
+            </div>
+          </div>
+        </article>
+
+        <p class="more" data-i18n="emptyFeedPrompt">Ikaw na ang bahala sa susunod na usapan. Magsimula ng thread.</p>
+      </div>
+
+      <!-- Sinusubaybayan -->
+      <div class="pane p2">
+        <article class="thread last">
+          <div class="side"><div class="av c4">JP</div></div>
+          <div class="body">
+            <div class="head"><b>Jun Pagkakaisa</b><span class="at">@jun.pagkakaisa</span><time data-i18n="time38Minutes">38 min</time></div>
+            <p data-i18n="followingPost">Tatlong beses akong nagtanong sa munisipyo tungkol sa pondo ng kalsada. Sa ikatlo, binigyan nila ako ng kopya. Huwag sumuko sa unang “balik na lang po kayo.”</p>
+            <div class="acts"><button><svg><use href="#i-heart"/></svg>640</button><button><svg><use href="#i-reply"/></svg>71</button><button><svg><use href="#i-repost"/></svg>180</button></div>
+          </div>
+        </article>
+        <p class="more" data-i18n="followingPrompt">Sundan ang mas marami pang tao para mapuno ang pahinang ito.</p>
+      </div>
+
+      <!-- Beripikado -->
+      <div class="pane p3">
+        <article class="thread last">
+          <div class="side"><div class="av c5">FC</div></div>
+          <div class="body">
+            <div class="head"><b>Fact-Check Pinas</b><span class="at">@suriin.muna</span><span class="badge"><svg><use href="#i-check"/></svg><span data-i18n="roleVerified">Sinuri</span></span><time data-i18n="timeThreeHours">3 oras</time></div>
+            <p data-i18n="factCheckPost">Kumakalat na larawan ng “pinakamalaking rally ngayong taon.” Nasuri namin: kuha ito noong 2019 at hindi ngayon. Suriin muna bago i-share.</p>
+            <div class="fact"><h4 data-i18n="resultHeading">Resulta</h4><ul><li><span data-i18n="originalPhotoDate">Petsa ng orihinal na larawan</span><span>2019</span></li><li><span data-i18n="statusLabel">Katayuan</span><span data-i18n="wrongContext">Maling konteksto</span></li></ul></div>
+            <div class="acts"><button><svg><use href="#i-heart"/></svg>2.2K</button><button><svg><use href="#i-reply"/></svg>96</button><button><svg><use href="#i-repost"/></svg>1.9K</button></div>
+          </div>
+        </article>
+        <p class="more" data-i18n="verifiedPrompt">Mga post na sinuri ng mga nakarehistrong tagasuri ng katotohanan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" data-view="search" hidden>
+    <h2 class="page-title" data-i18n="searchTitle">Maghanap</h2>
+    <label class="search"><svg><use href="#i-search"/></svg><input type="search" id="search2" aria-label="Maghanap" data-i18n-aria="searchTitle" placeholder="Maghanap ng usapin o tao" data-i18n-placeholder="searchPlaceholder"></label>
+    <div id="trend" class="panel"><h3 data-i18n="trendingTitle">Mga usapin ngayon</h3></div>
+    <div id="results"></div>
+  </section>
+
+  <section class="view" data-view="notifications" hidden>
+    <h2 class="page-title" data-i18n="notificationsTitle">Mga abiso</h2>
+    <div id="noteList" class="panel"></div>
+  </section>
+
+  <section class="view" data-view="profile" hidden>
+    <h2 class="page-title" data-i18n="profileTitle">Profile</h2>
+    <div id="profile"></div>
+  </section>
+
+  <section class="view" data-view="auth" hidden>
+    <div class="sun-banner"><h1 data-i18n="welcomeTitle">Maligayang pagdating.</h1><p data-i18n="welcomeDescription">Mag-log in, gumawa ng account, o tumuloy bilang bisita. Puwede kang mag-post nang anonymous anumang oras.</p></div>
+    <div class="panel authbox">
+      <div class="seg"><button type="button" class="on" data-auth="login" data-i18n="loginTab">Mag-log in</button><button type="button" data-auth="signup" data-i18n="signupTab">Mag-sign up</button></div>
+      <form id="loginForm" novalidate>
+        <label><span data-i18n="usernameLabel">Username</span><input name="handle" autocomplete="username" required></label>
+        <label><span data-i18n="passwordLabel">Password</span><input name="pw" type="password" autocomplete="current-password" required></label>
+        <p class="err" role="alert"></p>
+        <button class="btn" type="submit" data-i18n="loginTab">Mag-log in</button>
+      </form>
+      <form id="signupForm" novalidate hidden>
+        <label><span data-i18n="nameLabel">Pangalan</span><input name="name" autocomplete="name" maxlength="30" required></label>
+        <label><span data-i18n="usernameLabel">Username</span><input name="handle" autocomplete="username" maxlength="20" required><small data-i18n="usernameHint">3 hanggang 20 letra, numero o _</small></label>
+        <label><span data-i18n="passwordLabel">Password</span><input name="pw" type="password" autocomplete="new-password" required><small data-i18n="passwordHint">Hindi bababa sa 8 karakter</small></label>
+        <label><span data-i18n="repeatPassword">Ulitin ang password</span><input name="pw2" type="password" autocomplete="new-password" required></label>
+        <p class="err" role="alert"></p>
+        <button class="btn" type="submit" data-i18n="createAccount">Gumawa ng account</button>
+      </form>
+      <div class="or"><span data-i18n="orLabel">o</span></div>
+      <button class="btn ghost" type="button" id="guestBtn" data-i18n="continueGuest">Magpatuloy bilang bisita</button>
+      <p class="fine" data-i18n="demoNotice">Demo ito na walang totoong server. Nasa browser mo lang ang account, kaya huwag gamitin ang totoong password mo. Anonymous ang lahat ng post ng bisita.</p>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ KANAN ============ -->
+  <aside>
+    <label class="search"><svg><use href="#i-search"/></svg><input type="search" id="search" placeholder="Maghanap ng usapin o tao" data-i18n-placeholder="searchPlaceholder" aria-label="Maghanap" data-i18n-aria="searchTitle"></label>
+
+    <section class="panel">
+      <h3 data-i18n="trendingTitle">Mga usapin ngayon</h3>
+      <ul class="topics">
+        <li><a href="#"><b>#TanongBayan</b><small data-i18n="topicBudget">8.4K post, pagsusuri ng badyet</small></a></li>
+        <li><a href="#"><b>#PondoSaBaha</b><small data-i18n="topicFlood">5.1K post, mga proyektong pang-flood control</small></a></li>
+        <li><a href="#"><b>#KarapatanSaPagtitipon</b><small data-i18n="topicRights">3.7K post, gabay at karanasan</small></a></li>
+        <li><a href="#"><b>#SuriinMuna</b><small data-i18n="topicFactCheck">2.9K post, paglilinaw ng mga balita</small></a></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h3 data-i18n="eventsTitle">Mga paparating na pagtitipon</h3>
+      <div class="event"><div class="date"><b>28</b><small data-i18n="monthNov">NOB</small></div><div><strong data-i18n="eventBudget">Pampublikong talakayan sa badyet</strong><small data-i18n="eventBudgetPlace">Quezon City, 6:00 NH</small></div></div>
+      <div class="event"><div class="date"><b>30</b><small data-i18n="monthNov">NOB</small></div><div><strong data-i18n="eventMarch">Mapayapang martsa sa Liwasang Bonifacio</strong><small data-i18n="eventMarchPlace">Maynila, 4:00 NH</small></div></div>
+      <div class="event"><div class="date"><b>05</b><small data-i18n="monthDec">DIS</small></div><div><strong data-i18n="eventWorkshop">Workshop: paano magbasa ng ulat ng COA</strong><small data-i18n="eventWorkshopPlace">Online, 7:30 NG</small></div></div>
+    </section>
+
+    <section class="panel know">
+      <h3 data-i18n="rightsTitle">Alamin ang karapatan mo</h3>
+      <ul>
+        <li data-i18n="rightsBulletOne">Mapayapang pagtitipon ay karapatan.</li>
+        <li data-i18n="rightsBulletTwo">Magtala ng pangalan, oras, at lugar kung may insidente.</li>
+        <li data-i18n="rightsBulletThree">Magsama ng kaibigan at huwag lumayo sa grupo.</li>
+      </ul>
+    </section>
+
+    <p class="foot" data-i18n="footerNotice">Tinig ay halimbawang disenyo. Lahat ng pangalan at post dito ay kathang-isip. Hindi sinusuportahan ng platapormang ito ang karahasan o maling impormasyon.</p>
+  </aside>
+
+</div>
+<dialog class="confirm-dialog" id="deleteDialog" aria-labelledby="deleteDialogTitle" aria-describedby="deleteDialogText">
+  <div class="confirm-content">
+    <span class="confirm-icon" aria-hidden="true">!</span>
+    <h2 id="deleteDialogTitle" data-i18n="deleteTitle">Burahin ang post?</h2>
+    <p id="deleteDialogText" data-i18n="deleteMessage">Sigurado ka bang gusto mong burahin ang post na ito? Hindi na ito maibabalik.</p>
+    <div class="confirm-actions">
+      <button class="btn ghost" type="button" id="cancelDelete" data-i18n="cancelDelete">Kanselahin</button>
+      <button class="btn danger" type="button" id="confirmDelete" data-i18n="confirmDelete">Oo, burahin</button>
+    </div>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
